@@ -57,7 +57,14 @@ a {
 .navbar a {
   color: #000;
   text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
 }
+.navbar a:hover {
+  color: #ffa500;
+}
+
+
 
 .left-list {
   text-transform: uppercase;
@@ -77,13 +84,11 @@ img {
 }
 
 input {
-  border: 1px solid black;
+  border: 1px solid #000000;
   border-radius: 10px;
   font-size: 15px;
-  padding-left: 20px;
+  padding: 7px 8px ;
   width: 300px;
-  padding-top: 3px;
-  padding-bottom: 3px;
   display: flex;
   margin-right: 15px
   
@@ -91,31 +96,52 @@ input {
 
 .box-a {
   background-color: gold;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   height: 100%;
+  padding: 30px;
 }
 
 .box-a-div {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
+  height: 280px;
 }
 
 .h2-heading {
-  font-size: 50px;
+  font-size: 45px;
   line-height: 55px;
   margin-bottom: 20px;
 }
 
 .p-text {
   font-size: 22px;
+ 
+}
+
+.learn-more {
+  background-color: #000;
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 25px;
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 30px;
+}
+.learn-more:hover {
+  background-color: #006400;
 }
 
 
-.box-b,
-.shared-containter {
-  max-width: 1000px;
+.box-b {
+  /* max-width: 600px; */
   margin: auto; 
+  display: flex;
+  
+
+  
+ 
 }
 
 .box-b {
@@ -123,29 +149,43 @@ input {
 }
 
 .shared-container {
-  max-width: 500px;
+  max-width: 700px;
   text-align: center;
   justify-self: center;
   padding: 50px 40px;
   margin: 0 auto;
   background-color: orange;
   text-size-adjust: 0;
+  justify-items: end;
+  gap: 1px;
+ 
+  
+  
 }
+/* .burger-container {
+  display: flex;
+  justify-content: flex-start;
+}
+.doughnut-container {
+  display: flex;
+  justify-content: flex-end;
+  align-content: flex-end;
+} */
 
 .burger-image {
-  width: 500px;
+  width: 100%;
   height: 400px;
   object-fit: cover;
-  object-position: center;
+  object-position: left;
   
 }
 
 
 .doughnut-image {
-  width: 500px;
+  width: 100%;
   height: 400px;
   object-fit: cover;
-  object-position: right;
+  object-position: left;
 }
 
 .burger-paragraph,
@@ -158,7 +198,7 @@ input {
 .doughnut-button {
   cursor: pointer;
   display: inline-block;
-  background-color: #000;
+  background-color: #ffa500;
   color: #fff;
   border: 1px #000 solid;
   border-radius: 50px;
@@ -168,32 +208,63 @@ input {
   text-decoration: none;
   font-weight: bold;
 }
-
+.burger-button:hover {
+  background-color: #000;
+}
+.doughnut-button:hover {
+  background-color: #000;
+}
 
 .box-c {
   width: 100%;
   height: auto;
-  display: flex;
+  /* display: flex; */
   margin-bottom: 30px;
   
 }
 
+.springroll {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+  
+
+
+
 .chops-container {
  background-color: #006400;
+ width: 100%;
+ height: 100px;
+ display: flex;
+ justify-content: center;
  text-align: center;
  align-items: center;
  color: aliceblue;
- padding-top: 150px;
+ padding-top: 10px;
+}
+.span{
+  font-weight: bold;
+}
+.box-c p {
+  padding-left: 5px;
 }
 
 
 .box-d {
-  background-color: gold;
-  width: 100%;
-  height: auto;
-  display: flex;
+  display: grid;
+  grid-template-columns:repeat(2, 1fr) ;
+  gap: 2rem;
+  align-items: center;
   justify-content: space-between;
+  gap: 1px;
 }
+
+.puff-image {
+  width: 100%;
+}
+
+
 
 .grid-col-2 {
   display: grid;
@@ -201,7 +272,80 @@ input {
   gap: 2rem;
   align-items: center;
   justify-content: space-between;
+  gap: 1px;
 }
+
+.divider {
+  border-width: 1px;
+  border-color: #ffa500;
+  border-style: double;
+}
+
+.footer-container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px 30px;
+
+}
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 20px 0;
+}
+
+.social img {
+  width: 35px;
+  height: 35px;
+}
+
+.social a {
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.footer-list {
+  text-decoration: underline;
+}
+
+
+@media (max-width:768){
+  .navbar {
+    display: none;
+  }
+  
+  .footer {
+    text-align: center;
+  }
+
+  .brand-logo {
+    width: 40px;
+    height: 40px;
+  }
+  .grid-col-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1440px) {
+  .box {
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .box-a-div {
+    max-width: 700;
+  }
+
+  .divider {
+    max-width: 90%;
+  }
+}
+
+
 
 
  
