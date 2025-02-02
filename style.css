@@ -251,18 +251,18 @@ input {
 }
 
 
-.box-d {
+/* .box-d {
   display: grid;
   grid-template-columns:repeat(2, 1fr) ;
   gap: 2rem;
   align-items: center;
   justify-content: space-between;
   gap: 1px;
-}
+} */
 
-.puff-image {
+/* .puff-image {
   width: 100%;
-}
+} */
 
 
 
@@ -290,15 +290,13 @@ input {
 }
 .social {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-
+  align-items: center; 
   margin: 20px 0;
 }
 
 .social img {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
 }
 
 .social a {
@@ -308,6 +306,7 @@ input {
 
 .footer-list {
   text-decoration: underline;
+ 
 }
 
 
